@@ -6,8 +6,12 @@
   "window": {
     "navigationStyle": "custom"
   },
+  "permission": {},
   "usingComponents": {
+    "my": "/pages/my/my",
+    "qrcode": "/pages/qrcode/qrcode",
+    "home": "/pages/home/home",
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap28.json"
 }

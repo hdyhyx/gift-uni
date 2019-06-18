@@ -2723,11 +2723,11 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 	pointer-events: none;
 }
 .card-swiper {
-	height: 420rpx !important;
+	height: 820rpx !important;
 }
 .card-swiper swiper-item {
-	width: 610rpx !important;
-	left: 70rpx;
+	width: 500rpx !important;
+	left: 125rpx;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	padding: 40rpx 0rpx 70rpx;
@@ -4884,4 +4884,7 @@ scroll-view.cu-steps .cu-item {
 }
 
 /*每个页面公共css */
+uni-page-wrapper{
+	background: #fafafa;
+}
 

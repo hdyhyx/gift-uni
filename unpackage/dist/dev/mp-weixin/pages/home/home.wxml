@@ -1,0 +1,1 @@
+<view class="home"><view class="date-wrap bg-blue"><view class="date-content"></view></view><my-slider vue-id="1" bind:__l="__l"></my-slider></view>

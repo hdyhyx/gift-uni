@@ -40,4 +40,7 @@
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
 	/*每个页面公共css */
+	uni-page-wrapper{
+		background: #fafafa;
+	}
 </style>
