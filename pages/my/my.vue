@@ -14,7 +14,7 @@
 		<view class="nav-wrap">
 			<view class="cu-list menu card-menu margin-top">
 				<view class="cu-item arrow">
-					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
+					<navigator class="content" hover-class="none" url="../test/test" open-type="redirect">
 						<text class="cuIcon-discoverfill text-orange"></text>
 						<text class="text-grey">Navigator 跳转</text>
 					</navigator>
