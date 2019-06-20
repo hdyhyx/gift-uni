@@ -11,7 +11,7 @@
         初始化
  ==================== */
 body {
-	background-color: #f1f1f1;
+	background-color: #EEEEEE;
 	font-size: 28upx;
 	color: #333333;
 	font-family: Helvetica Neue, Helvetica, sans-serif;
@@ -138,9 +138,10 @@ checkbox::before {
 	position: absolute;
 	color: #ffffff !important;
 	top: 50%;
-	margin-top: -8px;
+	left: 3px;
+	margin-top: -7px;
 	right: 5px;
-	font-size: 32upx;
+	font-size: 30upx;
 	line-height: 16px;
 	pointer-events: none;
 	transform: scale(1, 1);
@@ -153,8 +154,8 @@ checkbox .wx-checkbox-input,
 radio .uni-radio-input,
 checkbox .uni-checkbox-input {
 	margin: 0;
-	width: 24px;
-	height: 24px;
+	width: 20px;
+	height: 20px;
 }
 
 checkbox.round .wx-checkbox-input,
@@ -2590,14 +2591,14 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .card-swiper {
-	height: 820upx !important;
+	height: 750upx !important;
 }
 
 .card-swiper swiper-item {
-	width: 500upx !important;
-	left: 125upx;
+	width: 480upx !important;
+	left: 145upx;
 	box-sizing: border-box;
-	padding: 40upx 0upx 70upx;
+	padding: 20upx 0upx 70upx;
 	overflow: initial;
 }
 

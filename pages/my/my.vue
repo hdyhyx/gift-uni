@@ -13,11 +13,11 @@
 		</view>
 		<view class="nav-wrap">
 			<view class="cu-list menu card-menu margin-top">
-				<view class="cu-item arrow">
-					<navigator class="content" hover-class="none" url="../test/test" open-type="redirect">
+				<view class="cu-item arrow" @click="goToAddress">
+					<view class="content">
 						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">Navigator 跳转</text>
-					</navigator>
+						<text class="text-grey">收货地址</text>
+					</view>
 				</view>
 				<view class="cu-item arrow">
 					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
@@ -55,6 +55,13 @@
 				avatar: [
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
 				],
+			}
+		},
+		methods:{
+			goToAddress(){
+				uni.navigateTo({
+					url:'../address/address'
+				})
 			}
 		}
 	}

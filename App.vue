@@ -41,7 +41,4 @@
 	@import "colorui/icon.css";
 	@import "colorui/animation.css";
 	/*每个页面公共css */
-	uni-page-wrapper{
-		background: #fafafa;
-	}
 </style>

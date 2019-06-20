@@ -43,9 +43,9 @@
 			left: 0;
 			bottom: 200px;
 			right: 0;
-			background-image:url('http://doveicnew.oss-cn-shenzhen.aliyuncs.com/applet/bg-blue.png');
-			background-size:cover;
-			border-bottom-left-radius: 50px;
+			background-image:url('https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358352-assets/web-upload/cc3b1807-c684-4b83-8f80-80e5b8a6b975.png');
+			background-size:100% 100%;
+			// border-bottom-left-radius: 50px;
 			z-index: 600;
 			.desc{
 				position: relative;
@@ -53,7 +53,7 @@
 				left: 50%;
 				transform: translate(-50%,-50%);
 				width: 500upx;
-				height: 600upx;
+				height: 750upx;
 				background: rgba(255,255,255,0.8);
 				border-radius: 10px;
 				box-shadow: 1px 4px 5px rgba(135,153,163,0.3);
@@ -74,7 +74,7 @@
 				width: 100%;
 				height: 100%;
 				background: #fafafa;
-				border-top-right-radius: 50px;
+				// border-top-right-radius: 50px;
 				.content-left{
 					flex: 1;
 					height: 60px;
