@@ -34,7 +34,7 @@
 		.date-wrap{
 			margin-bottom: 20upx;
 			width: 750upx;
-			height: 465upx;
+			height: 405upx;
 			box-shadow: 0px 4px 5px rgba(135,153,163,0.2);
 			.date-content{
 				position: relative;
@@ -42,7 +42,7 @@
 				left: 48%;
 				transform: translate(-50%,-50%);
 				width: 550rpx;
-				height: 280rpx;
+				height: 220rpx;
 				background: #ffffff;
 				border-radius: 5px;
 				&::after{
@@ -68,15 +68,15 @@
 		.date-wrap{
 			margin-bottom: 20upx;
 			width: 750upx;
-			height: 465upx;
+			height: 405upx;
 			box-shadow: 0px 4px 5px rgba(135,153,163,0.2);
 			.date-content{
 				position: relative;
-				top:45%;
+				top:50%;
 				left: 48%;
 				transform: translate(-50%,-50%);
 				width: 550rpx;
-				height: 280rpx;
+				height: 230rpx;
 				background: #ffffff;
 				border-radius: 5px;
 				&::after{

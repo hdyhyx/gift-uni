@@ -1434,7 +1434,7 @@ button.cuIcon.lg {
 .cu-list.grid>.cu-item [class*=cuIcon] {
 	position: relative;
 	display: block;
-	margin-top: 20upx;
+	margin-top: 5upx;
 	width: 100%;
 	font-size: 48upx
 }
@@ -1451,8 +1451,7 @@ button.cuIcon.lg {
 }
 
 .cu-list.grid.no-border>.cu-item {
-	padding-top: 10upx;
-	padding-bottom: 20upx
+	padding: 0;
 }
 
 .cu-list.grid.no-border>.cu-item:after {
@@ -1460,7 +1459,7 @@ button.cuIcon.lg {
 }
 
 .cu-list.grid.no-border {
-	padding: 20upx 10upx
+	padding: 10upx 5upx
 }
 
 .cu-list.grid.col-3>.cu-item:nth-child(3n):after,
@@ -2332,7 +2331,7 @@ button.cuIcon.lg {
 .cu-form-group .title {
 	text-align: justify;
 	padding-right: 30upx;
-	font-size: 30upx;
+	font-size: 28upx;
 	position: relative;
 	height: 60upx;
 	line-height: 60upx;
@@ -2340,7 +2339,7 @@ button.cuIcon.lg {
 
 .cu-form-group input {
 	flex: 1;
-	font-size: 30upx;
+	font-size: 28upx;
 	color: #555;
 	padding-right: 20upx;
 }
@@ -2591,12 +2590,12 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .card-swiper {
-	height: 750upx !important;
+	height: 810upx !important;
 }
 
 .card-swiper swiper-item {
-	width: 480upx !important;
-	left: 145upx;
+	width: 500upx !important;
+	left: 125upx;
 	box-sizing: border-box;
 	padding: 20upx 0upx 70upx;
 	overflow: initial;

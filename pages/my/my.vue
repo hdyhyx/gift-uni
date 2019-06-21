@@ -13,17 +13,23 @@
 		</view>
 		<view class="nav-wrap">
 			<view class="cu-list menu card-menu margin-top">
-				<view class="cu-item arrow" @click="goToAddress">
+				<view class="cu-item arrow">
+					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
+						<text class="cuIcon-discoverfill text-orange"></text>
+						<text class="text-grey">礼物详情</text>
+					</navigator>
+				</view>
+				<view class="cu-list grid col no-border col-3">
+					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]"></view>
+						<text>{{item.name}}</text>
+					</view>
+				</view>
+				<view class="cu-item arrow margin-top" @click="goToAddress">
 					<view class="content">
 						<text class="cuIcon-discoverfill text-orange"></text>
 						<text class="text-grey">收货地址</text>
 					</view>
-				</view>
-				<view class="cu-item arrow">
-					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
-						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">Navigator 跳转</text>
-					</navigator>
 				</view>
 				<view class="cu-item arrow">
 					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
@@ -52,9 +58,26 @@
 	export default {
 		data(){
 			return {
+				gridCol:3,
 				avatar: [
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
 				],
+								cuIconList: [{
+					cuIcon: 'cardboardfill',
+					color: 'red',
+					badge: 120,
+					name: '全部礼物'
+				}, {
+					cuIcon: 'recordfill',
+					color: 'orange',
+					badge: 1,
+					name: '已兑换礼物'
+				}, {
+					cuIcon: 'picfill',
+					color: 'yellow',
+					badge: 0,
+					name: '未兑换礼物'
+				},],
 			}
 		},
 		methods:{
