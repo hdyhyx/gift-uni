@@ -13,11 +13,11 @@
 		</view>
 		<view class="nav-wrap">
 			<view class="cu-list menu card-menu margin-top">
-				<view class="cu-item arrow">
-					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
+				<view class="cu-item arrow" @click="goToAllGifts">
+					<view class="content">
 						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">礼物详情</text>
-					</navigator>
+						<text class="text-grey">我的礼物</text>
+					</view>
 				</view>
 				<view class="cu-list grid col no-border col-3">
 					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
@@ -84,6 +84,11 @@
 			goToAddress(){
 				uni.navigateTo({
 					url:'../address/address'
+				})
+			},
+			goToAllGifts(){
+				uni.navigateTo({
+					url:'../myGifts/myGifts'
 				})
 			}
 		}

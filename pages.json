@@ -17,6 +17,9 @@
 		},
 		{
 			"path":"pages/ideAddress/ideAddress"
+		},
+		{
+			"path":"pages/myGifts/myGifts"
 		}
 	],
 	"globalStyle": {

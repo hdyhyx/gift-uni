@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import MySlider from '../../components/slider.vue'
+	import MySlider from '../../components/slider/slider.vue'
 	export default {
 		data() {
 			return {
