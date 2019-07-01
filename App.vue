@@ -1,5 +1,6 @@
 <script>
 	import Vue from 'vue'
+	import {mapState,mapActions} from 'vuex';
 	export default {
 		onLaunch: function() {
 			uni.getSystemInfo({
@@ -18,6 +19,7 @@
 					let custom = wx.getMenuButtonBoundingClientRect();
 					Vue.prototype.Custom = custom;
 					Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+					console.log(Vue.prototype.CustomBar)
 					// #endif		
 
 					// #ifdef MP-ALIPAY
@@ -29,9 +31,18 @@
 		},
 		onShow: function() {
 			console.log('App Show')
+			console.log(this.hasLogin)
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		methods:{
+			
+		},
+		computed:{
+			...mapState({  
+			hasLogin:state=>state.user.hasLogin                                                  
+		}),
 		}
 	}
 </script>

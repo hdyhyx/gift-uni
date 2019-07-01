@@ -30,7 +30,7 @@
 <style lang="scss">
 
 	.home{
-		/*#ifdef H5*/
+		/*#ifdef H5 || APP-PLUS*/
 		.date-wrap{
 			margin-bottom: 20upx;
 			width: 750upx;

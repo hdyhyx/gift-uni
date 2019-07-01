@@ -7,14 +7,14 @@
 		</view>
 		<view class="qrcode-warp">
 			<view class="qrcode-content">
-				<view class="content-left" >
+				<view class="content-left" @click="scanCode">
 					<view class="scan-qrcode">
 						<view class="scon-icon">
 							
 						</view>
 					</view>
 				</view>
-				<view class="content-right">
+				<view class="content-right" @click="gotoGoods">
 					<view class="input-qrcode">
 						<view class="qrcode-icon">
 							
@@ -27,6 +27,27 @@
 </template>
 
 <script>
+	export default {
+		data(){
+				
+			return{
+			}
+		},
+		methods:{
+			scanCode(){
+				wx.scanCode({
+				  success (res) {
+					console.log(res)
+				  }
+				})
+			},
+			gotoGoods(){
+				uni.navigateTo({
+					url:'../goodsList/goodsList'
+				})
+			}
+		}
+	}
 </script>
 
 <style lang="scss" scoped>

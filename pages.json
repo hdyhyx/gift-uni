@@ -20,6 +20,15 @@
 		},
 		{
 			"path":"pages/myGifts/myGifts"
+		},
+		{
+			"path":"pages/goodsList/goodsList"
+		},
+		{
+			"path":"pages/goodsDetail/goodsDetail"
+		},
+		{
+			"path":"pages/confirmOrder/confirmOrder"
 		}
 	],
 	"globalStyle": {

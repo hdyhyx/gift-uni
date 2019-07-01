@@ -13,14 +13,15 @@
 		</view>
 		<view class="nav-wrap">
 			<view class="cu-list menu card-menu margin-top">
-				<view class="cu-item arrow" @click="goToAllGifts">
+				<view class="cu-item arrow" @click="goToAllGifts" data-index="0"> <!-- index = 0 跳转 全部礼物 -->
 					<view class="content">
 						<text class="cuIcon-discoverfill text-orange"></text>
 						<text class="text-grey">我的礼物</text>
 					</view>
 				</view>
 				<view class="cu-list grid col no-border col-3">
-					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" :data-index="index" v-if="index<gridCol*2" @click="goToAllGifts">
+						<!-- data-index:0 全部礼物 ，1 已兑换礼物， 2 未兑换礼物 -->
 						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]"></view>
 						<text>{{item.name}}</text>
 					</view>
@@ -34,19 +35,19 @@
 				<view class="cu-item arrow">
 					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
 						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">Navigator 跳转</text>
+						<text class="text-grey">我的收藏</text>
 					</navigator>
 				</view>
 				<view class="cu-item arrow">
 					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
 						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">Navigator 跳转</text>
+						<text class="text-grey">我的卡卷</text>
 					</navigator>
 				</view>
 				<view class="cu-item arrow">
 					<navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
 						<text class="cuIcon-discoverfill text-orange"></text>
-						<text class="text-grey">Navigator 跳转</text>
+						<text class="text-grey">售后服务</text>
 					</navigator>
 				</view>
 			</view>
@@ -62,7 +63,7 @@
 				avatar: [
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
 				],
-								cuIconList: [{
+				cuIconList: [{
 					cuIcon: 'cardboardfill',
 					color: 'red',
 					badge: 120,
@@ -86,9 +87,10 @@
 					url:'../address/address'
 				})
 			},
-			goToAllGifts(){
+			goToAllGifts(e){
+				const current=e.currentTarget.dataset.index
 				uni.navigateTo({
-					url:'../myGifts/myGifts'
+					url:`../myGifts/myGifts?current=${current}`
 				})
 			}
 		}

@@ -1,7 +1,7 @@
 <template>
 	<view class="address">
 		<cu-custom bgColor="bg-white" :isBack="true"><block slot="backText">返回</block><block slot="content">收货地址</block></cu-custom>
-		<view class="address-wrap">
+		<view class="address-wrap"  :style="{top:CustomBar+'px'}">
 			<mescroll-uni :down="downOption" @down="downCallback" :up="upOption" @up="upCallback" @init="mescrollInit">
 				<view class="address-group" v-for="news in dataList" :key="news.id">
 					<view class="address-head">
@@ -45,6 +45,7 @@
 			data() {
 				return {
 					checkedAddress:true,
+					CustomBar: this.CustomBar,
 					mescroll: null, //mescroll实例对象
 					downOption: {
 						use:false,
@@ -138,15 +139,18 @@
 						}
 					}, 1000)
 				}
+			},
+			onLoad() {
 			}
 		}
 </script>
 
 <style lang="scss" scoped>
 	.address{
+
 		.create-wrap{
 			position: fixed;
-			left: 0;
+			left: 0; 
 			right: 0;
 			bottom: 0;
 			width: 100%;
@@ -157,14 +161,14 @@
 			.create-btn{
 				margin-top:20upx;
 				font-size: 28rpx;
-			}
+			}	
 		}
 		/*#ifdef H5 */
 		.address-wrap{
 			position: absolute;
 			top: 80rpx;
 			left: 0;
-			bottom: 0;
+			bottom: 120rpx;
 			right:0;
 			padding: 40upx 40upx 0 40upx;
 				/*说明*/
@@ -248,7 +252,7 @@
 			position: absolute;
 			top:64px;
 			left: 0;
-			bottom: 0;
+			bottom: 120rpx;
 			right:0;
 			padding: 40upx 40upx 0 40upx;
 				/*说明*/
@@ -327,5 +331,89 @@
 			}
 		}
 		/* #endif */
+		/*#ifdef APP-PLUS */
+		.address-wrap{
+			position: absolute;
+			top: 140rpx;
+			left: 0;
+			bottom: 120rpx;
+			right:0;
+			padding: 40upx 40upx 0 40upx;
+				/*说明*/
+			.notice{
+				font-size: 30upx;
+				padding: 40upx 0;
+				border-bottom: 1upx solid #eee;
+				text-align: center;
+			}
+			/*展示上拉加载的数据列表*/
+			.address-group{
+				width: 100%;
+				margin-bottom: 30upx;
+				background: #ffffff;
+				box-shadow: 1px 4px 5px rgba(135,153,163,0.3);
+				.address-head{
+					display: flex;
+					align-items: center;
+					height: 60upx;
+					line-height: 60upx;
+					font-size: 28upx;
+					padding: 0 20upx;
+					.name{
+						flex: 0 150upx;
+						overflow: hidden;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+					}
+					.phone{
+						flex: 1;
+						.addres-defuale{
+							display: inline-block;
+							margin-left: 10px;
+							width: 40px;
+							height: 25px;
+							line-height: 28px;
+							text-align: center;
+							font-size: 26upx;
+						}
+					}			
+				}
+				.address-content{
+					position: relative; 
+					max-height: 100upx;
+					line-height: 40upx;
+					padding:10upx 20upx; 
+					font-size: 28upx;
+					overflow: hidden;
+				}
+				.address-footer{
+					display: flex;
+					padding: 10upx 20upx;
+					align-items: center;
+					border-top: 1upx solid rgba(135,153,163,0.2);
+					.footer-checked{
+						flex: 0 200upx;
+						line-height: 80upx;
+						.checked-text{
+							padding-left: 20upx;
+							display: inline-block;
+							line-height: 80upx;
+						}
+					}
+					.footer-btn-wrap{
+						flex: 1;
+						text-align: right;
+						.footer-btn{
+							margin: 0 20upx;
+
+						}
+						.btn-boder{
+							border: 1upx solid #eee;
+						}
+					}
+				}
+			}
+		}
+		/*#endif */
 	}
 </style>
